@@ -199,3 +199,14 @@ main>section:not([class]) .legal .meta{color:var(--muted);font-size:.85rem;margi
   .closing-act{padding:22px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.beam{animation:none;top:50%}}
+
+/* ---------- brand pattern: Neural Star lattice, 30% opacity ---------- */
+:root{--pat-dark:url("pattern-dark.svg");--pat-light:url("pattern-light.svg");--pat-blue:url("pattern-blue.svg")}
+body,.site-header,.sipark,.audience,.facts-band{background-image:var(--pat-dark);background-repeat:repeat;background-size:180px 180px}
+.hero{background-image:var(--pat-dark),radial-gradient(900px 560px at 18% 115%,var(--navy-3) 0%,rgba(6,26,64,0) 70%);background-size:180px 180px,auto;background-repeat:repeat,no-repeat}
+.page-head{background-image:var(--pat-dark),radial-gradient(700px 360px at 15% 120%,var(--navy-3) 0%,rgba(6,26,64,0) 70%);background-size:180px 180px,auto;background-repeat:repeat,no-repeat}
+.closing{background-image:var(--pat-blue),radial-gradient(800px 420px at 85% 0%,#2A6FFF 0%,rgba(11,92,255,0) 70%);background-size:180px 180px,auto;background-repeat:repeat,no-repeat}
+.site-footer{background-image:var(--pat-dark);background-size:180px 180px}
+main>section:not([class]){background-image:var(--pat-light);background-size:220px 220px}
+.feats li{background-color:rgba(11,37,88,.92)}
+.contact-item,.toc{background-color:rgba(255,255,255,.96)}
