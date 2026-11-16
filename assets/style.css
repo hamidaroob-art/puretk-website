@@ -240,3 +240,25 @@ main>section:not([class]){background-image:var(--pat-light);background-size:200p
 }
 /* v3 icon set: 3D-glass audience icons */
 .aud-ic{display:block;width:64px;height:64px;margin-bottom:14px;border-radius:16px}
+/* brand v3: FDE specialty */
+.fde{padding:104px 0 24px;background-image:var(--pat-dark);background-size:200px 248px}
+.fde-head{display:flex;align-items:center;gap:20px}
+.fde-head img{border-radius:18px;flex:none}
+.fde-term{color:var(--sky);font-size:.88rem;margin-top:.6em;direction:ltr;text-align:start}
+html[dir=rtl] .fde-term{text-align:right}
+.fde-p{color:var(--soft);font-size:1.08rem;max-width:62ch;margin-top:22px}
+.fde-steps{list-style:none;counter-reset:f;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-top:44px}
+.fde-steps li{counter-increment:f;border-top:1px solid var(--sky);padding-top:18px}
+.fde-steps li::before{content:counter(f,arabic-indic);display:block;color:var(--sky);font-size:.9rem;margin-bottom:6px}
+html[lang=en] .fde-steps li::before{content:counter(f)}
+.fde-steps h3{font-size:1.12rem;font-weight:600}
+.fde-steps p{color:var(--soft);font-size:.94rem;margin-top:6px}
+.sp-name{display:flex;flex-direction:column;gap:.5em;margin-bottom:18px}
+.sp-name span{font-size:1rem;font-weight:700;color:#fff;letter-spacing:.02em}
+.sp-name small{color:var(--sky);font-size:.85rem}
+/* brand v3 type pairing: Latin set at 88% of the Arabic beside it */
+html[lang=ar] bdi,html[lang=ar] .ltr,html[lang=ar] [lang=en]{font-size:.88em}
+@media (max-width:960px){.fde{padding:72px 0 8px}.fde-steps{grid-template-columns:1fr 1fr;gap:24px}}
+@media (max-width:560px){.fde-steps{grid-template-columns:1fr}.fde-head{align-items:flex-start}}
+.sp-name{align-items:flex-start}
+@media (max-width:560px){.fde-head{flex-direction:column;align-items:flex-start;gap:14px}}
