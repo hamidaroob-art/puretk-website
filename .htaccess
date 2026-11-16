@@ -1,0 +1,6 @@
+# Redirect the secondary domain puretk.com.sa (and www) to the main site, keeping the path.
+# /.well-known/ is excluded so AutoSSL can validate the domain.
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !^/\.well-known/
+RewriteCond %{HTTP_HOST} ^(www\.)?puretk\.com\.sa$ [NC]
+RewriteRule ^(.*)$ https://puretk.sa/$1 [R=301,L]

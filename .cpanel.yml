@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/puretk/public_html/
-    - /bin/cp -R index.html contact.html privacy.html refund.html terms.html robots.txt sitemap.xml assets en $DEPLOYPATH
+    - /bin/cp -R index.html contact.html privacy.html refund.html terms.html robots.txt sitemap.xml .htaccess assets en $DEPLOYPATH
