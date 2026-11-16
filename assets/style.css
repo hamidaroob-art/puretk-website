@@ -210,3 +210,31 @@ body,.site-header,.sipark,.audience,.facts-band{background-image:var(--pat-dark)
 main>section:not([class]){background-image:var(--pat-light);background-size:220px 220px}
 .feats li{background-color:rgba(11,37,88,.92)}
 .contact-item,.toc{background-color:rgba(255,255,255,.96)}
+
+/* pricing */
+.pricing{margin-top:72px;border:1px solid var(--hair);border-radius:var(--r);padding:30px;background:rgba(4,18,46,.55)}
+.pricing h3{font-size:1.3rem;font-weight:700}
+.price-row{display:grid;grid-template-columns:repeat(3,1fr);margin-top:18px}
+.price-row div{padding:4px 22px;border-inline-start:1px solid var(--hair)}
+.price-row div:first-child{border-inline-start:0;padding-inline-start:0}
+.price-row small{display:block;color:var(--dim);font-size:.82rem}
+.price-row strong{font-size:1.45rem;font-weight:700;color:#fff}
+.pricing p{color:var(--soft);font-size:.9rem;margin-top:16px}
+/* about */
+.about{padding:24px 0 112px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.about-grid>div>p{color:var(--soft);margin-top:14px}
+.team-title{font-size:1.3rem;font-weight:700}
+.team{list-style:none;margin-top:14px}
+.team li{padding:18px 0;border-top:1px solid var(--hair)}
+.team h3{font-size:1.08rem;font-weight:600}
+.team .role{color:var(--sky);font-size:.9rem}
+.team p{color:var(--soft);font-size:.92rem;margin-top:4px}
+.about{background-image:var(--pat-dark);background-size:180px 180px}
+@media (max-width:960px){
+  .price-row{grid-template-columns:1fr}
+  .price-row div{border-inline-start:0;padding:12px 0;border-top:1px solid var(--hair)}
+  .price-row div:first-child{border-top:0}
+  .about-grid{grid-template-columns:1fr;gap:28px}
+  .about{padding:8px 0 72px}
+}
