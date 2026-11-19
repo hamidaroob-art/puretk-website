@@ -264,3 +264,11 @@ html[lang=ar] bdi,html[lang=ar] .ltr,html[lang=ar] [lang=en]{font-size:.88em}
 .sp-name{align-items:flex-start}
 @media (max-width:560px){.fde-head{flex-direction:column;align-items:flex-start;gap:14px}}
 bdi{white-space:nowrap}
+/* motion (only when motion is allowed; without JS the lines are simply drawn) */
+.js-motion .journey::before{transform:scaleX(0);transform-origin:right center;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+html[dir=ltr].js-motion .journey::before{transform-origin:left center}
+.js-motion .journey.in::before{transform:none}
+.js-motion .fde-steps li{border-top-color:transparent;background:linear-gradient(var(--sky),var(--sky)) top/0 1px no-repeat;transition:background-size 1s cubic-bezier(.2,.7,.2,1) .1s}
+html[dir=rtl] .js-motion .fde-steps li,html[dir=rtl].js-motion .fde-steps li{background-position:top right}
+.js-motion .fde-steps.in li{background-size:100% 1px}
+@media (max-width:760px){.js-motion .journey::before{transform:scaleY(0);transform-origin:center top}}
